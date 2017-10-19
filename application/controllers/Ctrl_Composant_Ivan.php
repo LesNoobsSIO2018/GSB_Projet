@@ -84,7 +84,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         }
         
         public function afficherMedicaments(){
-           $data['lesMedicament'] =$this->Model_Medicament_Ivan->getAllMedicament();
+           $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();
            $this->load->view('v_listeCompMods',$data);
         }
 

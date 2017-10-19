@@ -83,3 +83,20 @@ body{
 }
 .rdoList{
 }
+
+
+header {
+  padding: 70px 0 100px;
+ // background: #007AFF;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 70px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+

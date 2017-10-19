@@ -43,9 +43,16 @@
 
     </head>
     <body>
-      <div class="container"> 
-        <h1>Gestion des composants et des présentations de médicaments</h1>
         
+    <header class="bg-primary text-white" style="background-color: #007AFF;">
+        <div class="container text-center">
+          <h1>GSB</h1>
+          <h1>Gestion des composants et des présentations de médicaments</h1>
+        </div>
+    </header>
+      <div class="container"> 
+        
+          <section>
               <div class="row">
 			<div class="col-xs-6 col-sm-4">
 
@@ -86,6 +93,7 @@
 			</div>
                 
              </div>
+          </section>
       </div> 
     </body>
 </html><!--code d'Ivan-->

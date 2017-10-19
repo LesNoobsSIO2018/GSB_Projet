@@ -33,9 +33,15 @@
         </script>
     </head>
     <body>
+        <header class="bg-primary text-white" style="background-color: #007AFF;">
+        <div class="container text-center">
+          <h1>GSB</h1>
+          <h1> Listes des composants</h1>
+        </div>
+    </header>
         <div class="container">
         
-            <h1> Listes des composants</h1>
+            
             <div class="divImp">
                     <h3 id="colorh3">Afficher : </h3>
 
