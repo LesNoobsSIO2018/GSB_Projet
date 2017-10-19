@@ -1,0 +1,85 @@
+h1{
+   
+    text-align: center;
+}
+
+header {
+  padding: 60px 0 50px;
+}
+
+@media (min-width: 980px) {
+  header {
+    padding: 60px 0 50px;
+  }
+}
+
+section {
+  padding: 120px 0;
+}
+.container{
+  //  background: gray;
+}
+body{
+    background: #D9F4F9;
+}
+#idcom1,#idcom1{
+
+    color:#4BB5C1;
+}
+.table{
+        text-align: center;
+        margin-top: 20px;
+        width:100% ;
+     //  der : 1px;   
+}
+#idst{
+   font-size: 20px;
+}
+.thLC{
+    text-align: center;
+    color:#4BB5C1;
+}
+.cLC{
+    color:#002F2F;
+}
+.divImp{
+    //margin-left: 20px;
+}
+#colorh3{
+    color:#4BB5C1;
+    margin-left: 25px;
+}
+#rd1{
+    margin-left: 25px;²²
+}
+#btnAfficher{
+    margin-left: 30px;
+}
+.clth{
+    margin-left: 30px;
+    color:#4BB5C1;
+}
+#btnValid{
+    margin-left: 30px;
+}
+
+
+#inpCode, #inpLibelle{
+    ////margin-left: 12px;
+    size: 30px;
+}
+#btnIncCom{
+    margin-left: 30px;
+}
+#btnSubmit{
+    color:green;
+    margin-left: 30px;
+}
+.form-control{
+    size: 30px;
+}
+#Modifier{
+    margin-left: 35px;
+}
+.rdoList{
+}
