@@ -3,7 +3,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         function __construct() { 
          parent::__construct(); 
          //$this->load->helper('url'); 
-         $this->load->database();
+        // $this->load->database();
          $this->load->model("Model_Composant_Ivan");
          $this->load->model("Model_Medicament_Ivan");
         } 
@@ -25,10 +25,10 @@ class Ctrl_Composant_Ivan extends CI_Controller {
               $this->load->model("Model_Composant_Ivan");
               $data['leDernierComposants']=$this->Model_Composant_Ivan->getLastCode();
               $this->load->view('v_ajouterComposant',$data); 
-        }
+        }                                   
       
         public function form_composant(){
-            $this->ValiderFormHome();
+          //  $this->ValiderFormHome();
                   if($this->form_validation->run()==TRUE)
                   {
                           $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
@@ -41,22 +41,23 @@ class Ctrl_Composant_Ivan extends CI_Controller {
                       'CMP_CODE'       => $this->input->post('CMP_CODE'), 
                       'CMP_LIBELLE'    => $this->input->post('CMP_LIBELLE') 
                         ); 
+//                        print_r($data);
+//                        die;
                       $data1 = array( 
                       'CMP_LIBELLE'    => $this->input->post('CMP_LIBELLE') 
                         ); 
                       $libl = $data1['CMP_LIBELLE'];
-                        //var_dump($libl);
-                       // die;
+                      //print_r($libl);
+                        
                         if($this->input->post('Modifier'))
                         {
-                       
-                            $this->Model_Composant_Ivan->editComposant($libl, $this->input->post('CMP_CODE'));
+                            
+                            $this->Model_Composant_Ivan->editComposant($libl, $this->input->post('hidden_id'));
                             redirect(base_url()."index.php/Ctrl_Composant_Ivan/modife");
                         }
                         if($this->input->post('btnValider'))
                          {
-                            // var_dump($libl);
-                        //die;
+                        
                             $this->Model_Composant_Ivan->insertComposants($data);
                             $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
                             $this->load->view('v_listC',$data);
@@ -66,7 +67,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         public function ValiderFormHome()
 	{
 		$this->form_validation->set_error_delimiters('<div class=error>','</div>');
-		//$this->form_validation->set_rules("CMP_CODE", "Ajouter un code de composant", "required");
+		$this->form_validation->set_rules("CMP_CODE", "Ajouter un code de composant", "required");
                 $this->form_validation->set_rules("CMP_LIBELLE", "Ajouter une libellé de composant", "required");	
 	}
         
