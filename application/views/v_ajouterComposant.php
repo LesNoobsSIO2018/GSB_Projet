@@ -68,7 +68,7 @@
                 <table class="table">
                     <tr>
                         <th>
-                            <h2  class="clth"> Code du composant  <input class="form-control" id="disabledInput" type="text" name="CMP_CODE" > <?php  //echo form_input('CMP_CODE',set_value('CMP_CODE')); ?> </h2><spam><?php echo form_error("CMP_CODE"); ?></span>
+                            <h2  class="clth"> Code du composant  <input class="form-control" id="disabledInput" type="text" name="CMP_CODE" style='text-transform:uppercase'> <?php  //echo form_input('CMP_CODE',set_value('CMP_CODE')); ?> </h2><spam><?php echo form_error("CMP_CODE"); ?></span>
                         </th> 
                     </tr>
 
@@ -93,8 +93,30 @@
            <!-- <input id="btnIncCom" name="incert" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-success" type="submit" value="Sauvgarder">--><br><br>
            
          <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Revenir à la page d'accueil"> 
-    </div>
+    </form></div>
+
     </body>
-    </form>
+<!--     <footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+                        <br>
+			<p class="footer-company-name">PPE3 &copy; 2017</p>
+
+		</footer>-->
+    
 </html> <!--code d'Ivan-->
 

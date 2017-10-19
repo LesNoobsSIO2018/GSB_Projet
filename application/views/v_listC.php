@@ -42,14 +42,14 @@
         <div class="container">
         
             
-            <div class="divImp">
+<!--            <div class="divImp">
                     <h3 id="colorh3">Afficher : </h3>
 
                     <input class="rdoList" name="list" id="rd1" type="radio" value=""> Composant 
                     <input  class="rdoList" name="list" id="rd2" type="radio"> Composant d'un medicament  
                     <input class="btn btn-success" id="btnAfficher" type="button" value="Valider">
             </div>
-            <div id="ListComposant" style="//display:none">
+            <div id="ListComposant" style="//display:none">-->
 
             <table id="table" class="table" >
 
@@ -82,13 +82,36 @@
             }
             ?>  
             </table>  <br>
-            </div>
+            
             <div id="ListComposantDunMed" style="display:none">
                 <p>lol</p>
             </div>
             <br>
             <input id="pageIncert" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Incerer des composants">
           <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Revenir à la page d'accueil"> 
-       </div>
+         </div>
+        </div>
+        
+<!--         <footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+                        <br>
+			<p class="footer-company-name">PPE3 &copy; 2017</p>
+
+		</footer>-->
     </body>
 </html><!--code d'Ivan-->

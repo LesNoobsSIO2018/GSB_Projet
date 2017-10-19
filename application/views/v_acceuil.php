@@ -25,7 +25,7 @@
 		
 		function btnFunIncerer() {
    				 document.getElementById("divIncComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/ajouterComposant' >Inserer";
-   				 document.getElementById("divModComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/*' >Modifier";
+   				 document.getElementById("divModComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/AfficherPageList' >Modifier";
    				 document.getElementById("divListComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/AfficherPageList' >Listes";
 		}
 
@@ -94,6 +94,33 @@
                 
              </div>
           </section>
+
       </div> 
+       
+        
+        
+        
+        <footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
+
+<!--			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>-->
+                        <br>
+			<p class="footer-company-name">PPE3 &copy; 2017</p>
+
+		</footer>
+        
     </body>
 </html><!--code d'Ivan-->

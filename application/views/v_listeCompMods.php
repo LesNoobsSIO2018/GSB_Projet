@@ -14,6 +14,20 @@
          
         <script type="text/javascript" src="<?php echo base_url(); ?>Jquery/jquery-3.1.1.js"></script>
          <script type="text/javascript" src="  <?php echo base_url(); ?>js/lesFonctions.js"></script>
+         <script type="text/javascript">
+         $(
+                  function(){
+                      $('#idMeds').change(
+                         function(){
+                             AfficherComposantMeds($(this).val());
+                         });
+                      $('#RevPA').click(
+                              function(){
+                                AfficherPageA();   
+                        });
+ 
+             } );
+        </script>
     </head>
         <body>
 
@@ -35,7 +49,30 @@
 
             </select>
             <br>
+            <div id="divComps"></div>
             <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Revenir à la page d'accueil">
     </div>
+            
+<!--             <footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
+
+			<p class="footer-links">
+				<a href="#">Home</a>
+				·
+				<a href="#">Blog</a>
+				·
+				<a href="#">Pricing</a>
+				·
+				<a href="#">About</a>
+				·
+				<a href="#">Faq</a>
+				·
+				<a href="#">Contact</a>
+			</p>
+                        <br>
+			<p class="footer-company-name">PPE3 &copy; 2017</p>
+
+		</footer>-->
     </body>
 </html>
