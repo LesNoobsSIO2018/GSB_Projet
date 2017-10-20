@@ -13,7 +13,7 @@
         ?>  
                  <tr>
 <!--                    <td class="cLC">
-                          <?php echo $comps->CMP_CODE; ?>
+                          <?php //echo $comps->CMP_CODE; ?>
                     </td>-->
                     <td class="cLC">
                          <?php echo $comps->CMP_LIBELLE; ?>

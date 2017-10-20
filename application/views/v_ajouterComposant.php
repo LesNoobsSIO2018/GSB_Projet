@@ -20,6 +20,8 @@
                               function(){
                                 AfficherPageA();   
                         });
+                        
+                      
              } );
         </script>
     </head>
@@ -29,8 +31,6 @@
             <?php
             echo form_open('Ctrl_Composant_Ivan/form_composant');
             if(isset($unComposant)){
-                //foreach ($unComposant as $lst){
-                 //   print_r($unComposant);
             ?>
             <div class="row">
                     <table class="table">
