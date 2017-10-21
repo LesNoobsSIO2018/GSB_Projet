@@ -23,6 +23,10 @@
                                  $('.bg-info').show();
                                       
                               });
+                      $('#idMeds').change(
+                         function(){
+                             $('#hidden_id').val(($(this).val()));
+                         });
    
              } );
         </script>
@@ -40,28 +44,35 @@
         <hr>
             <h3>Choisissez un medicament</h3>
         
+            
+              <?php echo form_open(base_url().'index.php/Ctrl_Composant_Ivan/validate'); ?>
             <select class="form-control" id='idMeds'>
                 <?php 
                     foreach ($lesMedicaments as $meds){
-                        echo "<option value='".$meds->MED_DEPOTLEGAL."'>".$meds->MED_NOMCOMMERCIAL."</option>";
+                        echo "<option name='lstMedes' value='".$meds->MED_DEPOTLEGAL."'>".$meds->MED_NOMCOMMERCIAL."</option>";
                     }
                 ?>
 
             </select>
+            <input type="hidden" name="hidden" id="hidden_id" >
+            <!--<input type="text" id="id1">-->
+          
             <br>
             <div id='idComps' class="bg-info">
                 <h3>Choisissez les composants</h3>
-                <div class="checkbox">
   
                 <?php 
                         foreach ($lesComposants as $comps){
-                         echo "<label>";
+                            
+                         echo "<div class='checkbox'><label>";
                          echo  "<input  type='checkbox'  name='composants[]' value='".$comps->CMP_CODE."'>".$comps->CMP_LIBELLE;
-                         echo "</label><br>";
+                         echo "</label></div>";
                         }
                     ?>
-                </div>
+        
             </div>
+            
+            <input class="btn btn-info" type="submit" name="submitAJCM" value="Ajouter" style="margin-top: 20px;"><br>
          
             <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </div>

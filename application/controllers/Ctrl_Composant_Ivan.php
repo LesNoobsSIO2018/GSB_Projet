@@ -129,6 +129,30 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             $this->load->view('v_AjoutCompsMeds',$data);
             
         }
+        
+        public function validate(){
+            
+            if($this->form_validation->run()==true){
+                $this->ajouterComposantMeds();
+                
+            }else{
+                $data = array(   
+                    'composants' => $this->input->post('composants')
+                );
+                
+               
+                $idMedicament =$this->input->post('hidden') ;
+                var_dump($idMedicament);
+                 $lol=$this->input->post('composants'); 
+                 foreach ($lol as $l){
+                     echo $l;
+                 }
+//                  foreach ($lal as $li){
+//                     echo $li;
+//                 }
+            }
+            
+        }
 
      
         
