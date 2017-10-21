@@ -3,21 +3,12 @@ function AfficherLFC3(){
 
 }
 
-function AfficherPageIncert(){
-    window.location = "http://localhost/Projet/PPE_GSB/index.php/Ctrl_Composant_Ivan/ajouterComposant/";
-}
-
-function AfficherPageA(){
-    window.location = "http://localhost/Projet/PPE_GSB/";
-   // alert("lol");
-}
-
 function AfficherComposantMeds(idMedicament)
 {
     $.ajax(
     {
         type:"get",
-        url:"index.php/Ctrl_Composant_Ivan/afficherComposantMeds",
+        url:"afficherComposantMeds",
         data:"idMedicament="+idMedicament,
         success:function(data)
         {

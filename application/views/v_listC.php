@@ -16,19 +16,13 @@
         <script type="text/javascript">
          $(
                   function(){
-                      $('#RevPA').click(
-                              function(){
-                                AfficherPageA();   
-                        });
+//                      
                         $('#btnAfficher').click(
                                 function(){
                                     AfficherListComp();
                         });
                         
-                         $('#pageIncert').click(
-                                function(){
-                                    AfficherPageIncert();
-                        });
+                        
              } );
         </script>
     </head>
@@ -53,7 +47,7 @@
 
             <table id="table" class="table" >
 
-                <tr>
+                <tr class="info">
                     <th class="thLC">
                         Code d'un composant
                     </th>
@@ -87,8 +81,8 @@
                 <p>lol</p>
             </div>
             <br>
-            <input id="pageIncert" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Incerer des composants">
-          <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Revenir à la page d'accueil"> 
+            <input id="pageIncert" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/ajouterComposant/'" value="Incerer des composants">
+          <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
          </div>
         </div>
         

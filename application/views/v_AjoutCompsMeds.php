@@ -21,6 +21,12 @@
                          function(){
                              AfficherComposantMeds($(this).val());
                          });
+                         
+                      $('#idMeds').click(
+                              function(){
+                                 $('.bg-info').show();
+                                      
+                              });
                      
  
              } );
@@ -28,13 +34,15 @@
     </head>
         <body>
 
-        <header class="bg-primary text-white" style=" margin-bottom: 30px; background-color: #007AFF;">
+<!--        <header class="bg-primary text-white" style=" margin-bottom: 30px; background-color: #007AFF;">
             <div class="container text-center">
               <h1>GSB</h1>
               <h1>Liste composants d'un medicament</h1>
             </div>
-        </header>
+        </header>-->
     <div class="container">
+        <h2>Ajouter les composants d'un medicament</h2>
+        <hr>
             <h3>Choisissez un medicament</h3>
         
             <select class="form-control" id='idMeds'>
@@ -46,8 +54,15 @@
 
             </select>
             <br>
-            <div id="divComps"></div>
-                      <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
+            <div id='idComps' class="bg-info">
+                <?php 
+                        foreach ($lesComposants as $comps){
+                           echo $comps->CMP_CODE;
+                        }
+                    ?>
+            </div>
+         
+       <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </div>
             
 <!--             <footer class="footer-basic-centered">

@@ -120,6 +120,15 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             $this->load->view('v_CompsMeds',$data);
             
         }
+        
+         public function ajouterComposantMeds(){
+           // $idMedicament = $_GET['idMedicament'];
+
+            $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();
+            $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
+            $this->load->view('v_AjoutCompsMeds',$data);
+            
+        }
 
      
         
