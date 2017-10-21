@@ -55,14 +55,20 @@
             </select>
             <br>
             <div id='idComps' class="bg-info">
+                <h3>Choisissez les composants</h3>
+                <div class="checkbox">
+  
                 <?php 
                         foreach ($lesComposants as $comps){
-                           echo $comps->CMP_CODE;
+                         echo "<label>";
+                         echo  "<input  type='checkbox'  name='composants[]' value='".$comps->CMP_CODE."'>".$comps->CMP_LIBELLE;
+                         echo "</label><br>";
                         }
                     ?>
+                </div>
             </div>
          
-       <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
+            <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </div>
             
 <!--             <footer class="footer-basic-centered">
