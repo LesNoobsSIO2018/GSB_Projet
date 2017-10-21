@@ -17,18 +17,13 @@
          <script type="text/javascript">
          $(
                   function(){
-                      $('#idMeds').change(
-                         function(){
-                             AfficherComposantMeds($(this).val());
-                         });
-                         
+ 
                       $('#idMeds').click(
                               function(){
                                  $('.bg-info').show();
                                       
                               });
-                     
- 
+   
              } );
         </script>
     </head>

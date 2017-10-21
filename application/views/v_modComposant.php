@@ -15,11 +15,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>Jquery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
            $(
-                  function(){
-                      $('#RevPA').click(
-                              function(){
-                                AfficherPageA();   
-                        });
+
              } );
         </script>
     </head>
@@ -60,7 +56,7 @@
         
            <!-- <input id="btnIncCom" name="incert" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-success" type="submit" value="Sauvgarder">--><br><br>
             <br />
-         <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" value="Revenir à la page d'accueil"> 
+         <input id="RevPA" data-toggle="tooltip" data-placement="top"  title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </body>
     </form>
 </html> <!--code d'Ivan-->
