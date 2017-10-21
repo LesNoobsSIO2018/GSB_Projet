@@ -16,9 +16,7 @@ header {
 section {
   padding: 120px 0;
 }
-.container{
-  //  background: gray;
-}
+
 body{
     background: #D9F4F9;
 }
@@ -29,8 +27,8 @@ body{
 .table{
         text-align: center;
         margin-top: 20px;
-        width:100% ;
-     //  der : 1px;   
+        width:100%;
+ 
 }
 #idst{
    font-size: 20px;
@@ -42,15 +40,13 @@ body{
 .cLC{
     color:#002F2F;
 }
-.divImp{
-    //margin-left: 20px;
-}
+
 #colorh3{
     color:#4BB5C1;
     margin-left: 25px;
 }
 #rd1{
-    margin-left: 25px;²²
+    margin-left: 25px;
 }
 #btnAfficher{
     margin-left: 30px;
@@ -65,7 +61,6 @@ body{
 
 
 #inpCode, #inpLibelle{
-    ////margin-left: 12px;
     size: 30px;
 }
 #btnIncCom{
@@ -87,7 +82,6 @@ body{
 
 header {
   padding: 50px 0 50px;
- // background: #007AFF;
 }
 
 @media (min-width: 992px) {
