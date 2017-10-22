@@ -23,6 +23,36 @@ function AfficherComposantMeds(idMedicament)
     }
     );
 }
+function IncererMedCom()
+{
+    $.ajax(
+    {
+        type:"post",
+        url:"IncererComposantMedic",
+        data:"medicament="+$('#hidden_id_meds').val()+"&composant="+$('#hidden_id_comps').val()+"&quantite="+$('#CST_QTE').val(),
+        success:function(data)
+        { swal(
+                'Le composant a était ajouté!',
+                'Vous pouvez ajouter un autre!',
+                'success',{timer: 2000}
+              );
+
+           $('#MedComps').empty();
+            $('#MedComps').append(data);
+        },
+        error:function()
+        {
+       swal({
+                title: 'Ce composant est deja dans la liste!',
+                text: "Choisissez un autre",
+                type: 'warning',
+                showCancelButton: true,
+                timer: 2000
+              });
+        }
+    }
+    );
+}
 //function AfficherListComp(){
 //    var rdo=document.getElementsByName('list');
 //    

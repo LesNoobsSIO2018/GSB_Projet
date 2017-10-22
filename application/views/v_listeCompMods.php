@@ -47,29 +47,9 @@
             </select>
             <br>
             <div id="divComps"></div>
+            <input   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/ajouterComposantMeds'" value="Ajouter les composants d'un medicament">
                       <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </div>
-            
-<!--             <footer class="footer-basic-centered">
 
-			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
-
-			<p class="footer-links">
-				<a href="#">Home</a>
-				·
-				<a href="#">Blog</a>
-				·
-				<a href="#">Pricing</a>
-				·
-				<a href="#">About</a>
-				·
-				<a href="#">Faq</a>
-				·
-				<a href="#">Contact</a>
-			</p>
-                        <br>
-			<p class="footer-company-name">PPE3 &copy; 2017</p>
-
-		</footer>-->
     </body>
 </html>

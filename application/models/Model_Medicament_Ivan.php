@@ -18,4 +18,10 @@ class Model_Medicament_Ivan extends CI_Model{
         return $sql->result();
     }
     //  SELECT * FROM medicament, constituer, composant where medicament.MED_DEPOTLEGAL=constituer.MED_DEPOTLEGAL AND constituer.CMP_CODE=composant.CMP_CODE
+    
+    public function insertMedicComposants($medicament,$composant,$CST_QTE){
+         $sql = $this->db->query("INSERT INTO constituer values('".$medicament."','".$composant."','".$CST_QTE."')"); 
+        //$this->db->insert("constituer", $data);
+        //INSERT INTO `constituer` (`MED_DEPOTLEGAL`, `CMP_CODE`, `CST_QTE`) VALUES ('', '', NULL);
+    }
 }

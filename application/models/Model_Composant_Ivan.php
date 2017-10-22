@@ -26,8 +26,7 @@ class Model_Composant_Ivan extends CI_Model{
     public function editComposant($data, $CMP_CODE){
 //        $this->db->where('CMP_CODE',$CMP_CODE);
 //        $this->db->update("composant",$data);
-        
-        $sql=$this->db->query("UPDATE composant SET CMP_LIBELLE='".$data."' WHERE CMP_CODE ='".$CMP_CODE."'");
+          $this->db->query("UPDATE composant SET CMP_LIBELLE='".$data."' WHERE CMP_CODE ='".$CMP_CODE."'");
     }
 }
         

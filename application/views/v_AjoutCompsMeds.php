@@ -11,7 +11,7 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style_ivan.css" />
-         
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>Jquery/jquery-3.1.1.js"></script>
          <script type="text/javascript" src="  <?php echo base_url(); ?>js/functions.js"></script>
          <script type="text/javascript">
@@ -23,10 +23,40 @@
                                  $('.bg-info').show();
                                       
                               });
-                      $('#idMeds').change(
+                      $('#idMeds').show(
                          function(){
-                             $('#hidden_id').val(($(this).val()));
+                             $('#hidden_id_meds').val(($(this).val()));
                          });
+                         $('#idMeds').change(
+                         function(){
+                             $('#hidden_id_meds').val(($(this).val()));
+                         });
+                         
+                         $('#selComp').show(
+                         function(){
+                             $('#hidden_id_comps').val(($(this).val()));
+                         });
+                         $('#selComp').change(
+                         function(){
+                             $('#hidden_id_comps').val(($(this).val()));
+                         });
+
+                         $('#btnValidCom').click(
+                         function(){
+                           IncererMedCom();
+                            
+                         });
+                         
+                        $('#idMeds').show(
+                        function(){
+                            AfficherComposantMeds($(this).val());
+                        });
+                         $('#idMeds').change(
+                         function(){
+                             AfficherComposantMeds($(this).val());
+                         });
+                         
+                      
    
              } );
         </script>
@@ -40,12 +70,13 @@
             </div>
         </header>-->
     <div class="container">
+        <div id="MedComps">
         <h2>Ajouter les composants d'un medicament</h2>
         <hr>
             <h3>Choisissez un medicament</h3>
         
             
-              <?php echo form_open(base_url().'index.php/Ctrl_Composant_Ivan/validate'); ?>
+              <?php // echo form_open(base_url().'index.php/Ctrl_Composant_Ivan/validate'); ?>
             <select class="form-control" id='idMeds'>
                 <?php 
                     foreach ($lesMedicaments as $meds){
@@ -54,49 +85,39 @@
                 ?>
 
             </select>
-            <input type="hidden" name="hidden" id="hidden_id" >
-            <!--<input type="text" id="id1">-->
-          
+             <input type="hidden" name="hidden " id="hidden_id_meds" >
+            <input type="hidden" name="hidden " id="hidden_id_comps" >
+       <div class="row">
+           <div class="col-md-6">
+
+                
             <br>
-            <div id='idComps' class="bg-info">
+            <div id='idComps'>
                 <h3>Choisissez les composants</h3>
-  
-                <?php 
-                        foreach ($lesComposants as $comps){
-                            
-                         echo "<div class='checkbox'><label>";
-                         echo  "<input  type='checkbox'  name='composants[]' value='".$comps->CMP_CODE."'>".$comps->CMP_LIBELLE;
-                         echo "</label></div>";
-                        }
-                    ?>
-        
+                        <select id="selComp" class="form-control">
+                        <?php 
+                                foreach ($lesComposants as $comps){
+                                    echo "<option value='".$comps->CMP_CODE."'>".$comps->CMP_LIBELLE."</option>";
+                                }
+                            ?>
+                        </select><br>
+            <label>CST Quantité</label><input class="form-control" type="text" id="CST_QTE">
             </div>
-            
-            <input class="btn btn-info" type="submit" name="submitAJCM" value="Ajouter" style="margin-top: 20px;"><br>
-         
+            <input id="btnValidCom" class="btn btn-success" type="submit" name="submitAJCM" value="Ajouter" style="margin-top: 20px;"><br>
+            <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments'" value="Liste de composants d'un medicament">
             <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
-    </div>
+        </div>
+           <div class="col-md-6">
+               <br>
+               <h3>Les composant d'un medicament</h3>
+               <div id="divComps"></div>
+           </div>
+       </div>
             
-<!--             <footer class="footer-basic-centered">
+    
+        </div> 
+    
+    </div>
 
-			<p class="footer-company-motto">By Ivan Naluzhnyi</p>
-
-			<p class="footer-links">
-				<a href="#">Home</a>
-				·
-				<a href="#">Blog</a>
-				·
-				<a href="#">Pricing</a>
-				·
-				<a href="#">About</a>
-				·
-				<a href="#">Faq</a>
-				·
-				<a href="#">Contact</a>
-			</p>
-                        <br>
-			<p class="footer-company-name">PPE3 &copy; 2017</p>
-
-		</footer>-->
     </body>
 </html>

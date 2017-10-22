@@ -28,7 +28,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         }                                   
       
         public function form_composant(){
-          //  $this->ValiderFormHome();
+          // $this->ValiderFormHome();
                   if($this->form_validation->run()==TRUE)
                   {
                           $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
@@ -70,18 +70,16 @@ class Ctrl_Composant_Ivan extends CI_Controller {
                            }
                             //var_dump($inBase);
                             //var_dump($data['CMP_CODE']);
-                           // var_dump($codeComps);
                             //die;
                             if($inBase == 1){
                                 echo  "Le composant avec ce code est déja occupeé<br>";
-                                echo "<a class ='link' href='http://localhost/Projet/PPE_GSB/index.php/Ctrl_Composant_Ivan/ajouterComposant/'> Revenire a la page d'incertion </a>";
-                              //  redirect(base_url()."index.php/Ctrl_Composant_Ivan/modife");
+                                 echo "<a class ='link' href='".base_url()."index.php/Ctrl_Composant_Ivan/ajouterComposant/'> Revenire a la page d'incertion </a>";
+//                                redirect(base_url()."index.php/Ctrl_Composant_Ivan/modife");
                                 
                             }
                             else{    
                                 $this->Model_Composant_Ivan->insertComposants($data);
-                                $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
-                                $this->load->view('v_listC',$data);
+                                $this->ajouterComposant();
                             }
 //                            $this->Model_Composant_Ivan->insertComposants($data);
 //                            $this->load->view('v_listC',$data);
@@ -91,7 +89,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         public function ValiderFormHome()
 	{
 		$this->form_validation->set_error_delimiters('<div class=error>','</div>');
-		$this->form_validation->set_rules("CMP_CODE", "Ajouter un code de composant", "required");
+		//$this->form_validation->set_rules("CMP_CODE", "Ajouter un code de composant", "required");
                 $this->form_validation->set_rules("CMP_LIBELLE", "Ajouter une libellé de composant", "required");	
 	}
         
@@ -108,7 +106,8 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         }
         
         public function afficherMedicaments(){
-           $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();
+           $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();   
+           $data["lesComposantDeMedicaments"] = $this->Model_Medicament_Ivan->getComposantMeds($data['lesMedicaments'][0]->MED_NOMCOMMERCIAL);
            $this->load->view('v_listeCompMods',$data);
         }
         
@@ -116,6 +115,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             $idMedicament = $_GET['idMedicament'];
 //            var_dump($idMedicament);
 //            die;
+            
             $data["lesComposantDeMedicaments"] = $this->Model_Medicament_Ivan->getComposantMeds($idMedicament);
             $this->load->view('v_CompsMeds',$data);
             
@@ -130,31 +130,13 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             
         }
         
-        public function validate(){
-            
-            if($this->form_validation->run()==true){
-                $this->ajouterComposantMeds();
-                
-            }else{
-                $data = array(   
-                    'composants' => $this->input->post('composants')
-                );
-                
-               
-                $idMedicament =$this->input->post('hidden') ;
-                var_dump($idMedicament);
-                 $lol=$this->input->post('composants'); 
-                 foreach ($lol as $l){
-                     echo $l;
-                 }
-//                  foreach ($lal as $li){
-//                     echo $li;
-//                 }
-            }
-            
+        public function IncererComposantMedic(){
+            $medicament = $_POST['medicament'];
+            $composant = $_POST['composant'];
+            $CST_QTE = $_POST['quantite'];
+            $this->Model_Medicament_Ivan->insertMedicComposants($medicament,$composant,$CST_QTE);
+            $this->ajouterComposantMeds();
         }
-
-     
-        
+       
       
 }

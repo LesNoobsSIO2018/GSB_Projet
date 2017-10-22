@@ -1,9 +1,5 @@
-
 <table class='table'>
                 <tr class="info">
-<!--                    <th class="thLC">
-                        Code d'un composant
-                    </th>-->
                     <th class="thLC">
                         Libelle d'un composant 
                     </th>
@@ -15,9 +11,6 @@
        foreach ($lesComposantDeMedicaments as $comps){
         ?>  
                  <tr>
-<!--                    <td class="cLC">
-                          <?php //echo $comps->CMP_CODE; ?>
-                    </td>-->
                     <td class="cLC">
                          <?php echo $comps->CMP_LIBELLE; ?>
                     </td>
