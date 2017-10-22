@@ -63,20 +63,12 @@
     </head>
         <body>
 
-<!--        <header class="bg-primary text-white" style=" margin-bottom: 30px; background-color: #007AFF;">
-            <div class="container text-center">
-              <h1>GSB</h1>
-              <h1>Liste composants d'un medicament</h1>
-            </div>
-        </header>-->
     <div class="container">
         <div id="MedComps">
         <h2>Ajouter les composants d'un medicament</h2>
         <hr>
             <h3>Choisissez un medicament</h3>
-        
-            
-              <?php // echo form_open(base_url().'index.php/Ctrl_Composant_Ivan/validate'); ?>
+       
             <select class="form-control" id='idMeds'>
                 <?php 
                     foreach ($lesMedicaments as $meds){

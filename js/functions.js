@@ -45,6 +45,7 @@ function IncererMedCom()
        swal({
                 title: 'Ce composant est deja dans la liste!',
                 text: "Choisissez un autre",
+                dangerMode: true,
                 type: 'warning',
                 showCancelButton: true,
                 timer: 2000
