@@ -21,6 +21,10 @@
                          function(){
                              AfficherComposantMeds($(this).val());
                          });
+                         $('#idMeds').show(
+                         function(){
+                             AfficherComposantMeds($(this).val());
+                         });
                      
  
              } );

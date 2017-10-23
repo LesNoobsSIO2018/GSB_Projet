@@ -15,30 +15,32 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>Jquery/jquery-3.1.1.js"></script>
          <script type="text/javascript" src="  <?php echo base_url(); ?>js/functions.js"></script>
          <script type="text/javascript">
+             
          $(
                   function(){
- 
+;
+
                       $('#idMeds').click(
                               function(){
                                  $('.bg-info').show();
                                       
                               });
-                      $('#idMeds').show(
-                         function(){
-                             $('#hidden_id_meds').val(($(this).val()));
+                     $('#idMeds').show(                         
+                             function(){
+                                $('#hidden_id_meds').val(($(this).val()));
                              ComposantMed();
                          });
                          $('#idMeds').change(
                          function(){
-                             $('#hidden_id_meds').val(($(this).val()));
+                            $('#hidden_id_meds').val(($(this).val()));
                              ComposantMed();
                          });
-                         
-                         $('#selComp').show(
-                         function(){
-                             $('#hidden_id_comps').val(($(this).val()));
-                             QuantiteMedCom();
-                         });
+//                         $('#selComp').show(
+//                         function(){
+//                             $('#hidden_id_comps').val(($(this).val()));
+//                             QuantiteMedCom();
+//                         });
+            
                          $('#selComp').change(
                          function(){
                              $('#hidden_id_comps').val(($(this).val()));
@@ -68,7 +70,7 @@
         <body>
 
     <div class="container">
-        <div id="MedComps">
+        <div id="Aj">
         <h2>Modifier les composants d'un medicament</h2>
         <hr>
             <h3>Choisissez un medicament</h3>
@@ -99,9 +101,10 @@
                             ?>
                         </select>
                 </div><br>
+                <h3>Modifier la quantité</h3>
                         <label>CST Quantité</label><div id="inpQte"><input class="form-control" type="text" id="CST_QTE"></div>
             </div>
-            <input id="btnValidCom" class="btn btn-success" type="submit" name="submitAJCM" value="Ajouter" style="margin-top: 20px;"><br>
+            <input id="btnValidCom" class="btn btn-success" type="button"  value="Modifier" style="margin-top: 20px;"><br>
             <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments'" value="Liste de composants d'un medicament">
             
             <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 

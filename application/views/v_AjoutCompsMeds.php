@@ -41,9 +41,9 @@
                              $('#hidden_id_comps').val(($(this).val()));
                          });
 
-                         $('#btnModQte').click(
+                         $('#IncererMedCom').click(
                          function(){
-                           ModifMedCom();
+                           IncererMedCom();
                             
                          });
                          
@@ -64,7 +64,7 @@
         <body>
 
     <div class="container">
-        <div id="Aj">
+        <div id="MedComps">
         <h2>Ajouter les composants d'un medicament</h2>
         <hr>
             <h3>Choisissez un medicament</h3>
@@ -95,7 +95,7 @@
                         </select><br>
             <label>CST Quantité</label><input class="form-control" type="text" id="CST_QTE">
             </div>
-            <input id="btnModQte" class="btn btn-success" type="button" value="Modifier" style="margin-top: 20px;"><br>
+            <input id="IncererMedCom" class="btn btn-success" type="button" value="Ajouter" style="margin-top: 20px;"><br>
             <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments'" value="Liste de composants d'un medicament">
             <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/modifierComposantMeds'" value="Modifier de composants d'un medicament">
             <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 

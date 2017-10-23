@@ -107,7 +107,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
         
         public function afficherMedicaments(){
            $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();   
-           $data["lesComposantDeMedicaments"] = $this->Model_Medicament_Ivan->getComposantMeds($data['lesMedicaments'][0]->MED_NOMCOMMERCIAL);
+         //  $data["lesComposantDeMedicaments"] = $this->Model_Medicament_Ivan->getComposantMeds($data['lesMedicaments'][0]->MED_NOMCOMMERCIAL);
            $this->load->view('v_listeCompMods',$data);
         }
         
@@ -121,8 +121,7 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             
         }
         
-         public function ajouterComposantMeds(){
-           // $idMedicament = $_GET['idMedicament'];
+        public function ajouterComposantMeds(){
 
             $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();
             $data['lesComposants']=$this->Model_Composant_Ivan->getAllComposants();
