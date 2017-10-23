@@ -45,6 +45,7 @@ public function creerMedicament()
             $prix = $_POST['prix'];
             $this->load->model("Model_Medoc");
             $this->Model_Medoc->creerMedicament($depot,$nom,$code,$compo,$effets,$contreindic,$prix);
+            $this->getAllMedicaments();
         }
 public function modifMedicament()
         {

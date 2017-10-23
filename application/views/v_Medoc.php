@@ -48,6 +48,7 @@
         </script>
     </head>
     <body>
+        <div id="lol">
         <h1> Medicaments </h1>
         <input id="txtDepot" type="text" placeholder="dépot légal">
         <input id="txtNom" type="text" placeholder="nom commercial">
@@ -100,6 +101,7 @@
         </table>
         <div id="div1"></div>
         <div id="div2"></div>
+        </div>
     </body>
 </html>
     
