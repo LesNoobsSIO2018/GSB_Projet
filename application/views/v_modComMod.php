@@ -107,7 +107,7 @@
             <input id="btnValidCom" class="btn btn-success" type="button"  value="Modifier" style="margin-top: 20px;"><br>
             <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments'" value="Liste de composants d'un medicament">
             
-            <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
+            <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/index'" value="Revenir à la page d'accueil"> 
         </div>
           
        </div>

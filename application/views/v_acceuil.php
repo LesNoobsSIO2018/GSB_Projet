@@ -24,15 +24,15 @@
         <script type="text/javascript">
 		
 		function btnFunIncerer() {
-   				 document.getElementById("divIncComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/ajouterComposant' >Inserer";
-   				 document.getElementById("divModComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/AfficherPageList' >Modifier";
-   				 document.getElementById("divListComp").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/AfficherPageList' >Listes";
+   				 document.getElementById("divIncComp").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/ajouterComposant' >Inserer";
+   				 document.getElementById("divModComp").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/AfficherPageList' >Modifier";
+   				 document.getElementById("divListComp").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/AfficherPageList' >Listes";
 		}
 
 		function btnComposant_dun_medicament(){
-					 document.getElementById("divIncCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/ajouterComposantMeds' >Inserer";
-   					 document.getElementById("divModCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/modifierComposantMeds' >Modifier";
-   					 document.getElementById("divListCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/afficherMedicaments' >Listes";
+					 document.getElementById("divIncCM").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/ajouterComposantMeds' >Inserer";
+   					 document.getElementById("divModCM").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/modifierComposantMeds' >Modifier";
+   					 document.getElementById("divListCM").innerHTML = "<a class='btn btn-warning' href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments' >Listes";
 
 		}
 		function btnFormationMed(){
@@ -94,6 +94,7 @@
                 
              </div>
           </section>
+          <input id="RevPA" data-toggle="tooltip" data-placement="top"  title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page de GSB"> 
 
       </div> 
        
