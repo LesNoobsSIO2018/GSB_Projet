@@ -32,7 +32,7 @@ function IncererMedCom()
         data:"medicament="+$('#hidden_id_meds').val()+"&composant="+$('#hidden_id_comps').val()+"&quantite="+$('#CST_QTE').val(),
         success:function(data)
         { swal(
-                'Le composant a était ajouté!',
+                'Le composant a été ajouté!',
                 'Vous pouvez ajouter un autre!',
                 'success',{timer: 2000}
               );
