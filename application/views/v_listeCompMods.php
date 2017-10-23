@@ -47,6 +47,7 @@
             </select>
             <br>
             <div id="divComps"></div>
+            <input class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/modifierComposantMeds'" value="Modifier de composants d'un medicament">
             <input   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/ajouterComposantMeds'" value="Ajouter les composants d'un medicament">
                       <input id="RevPA" data-toggle="tooltip" data-placement="top" title="Afficher les actions"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
     </div>

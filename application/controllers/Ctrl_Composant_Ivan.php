@@ -130,13 +130,52 @@ class Ctrl_Composant_Ivan extends CI_Controller {
             
         }
         
-        public function IncererComposantMedic(){
+        public function incererComposantMedic(){
             $medicament = $_POST['medicament'];
             $composant = $_POST['composant'];
             $CST_QTE = $_POST['quantite'];
             $this->Model_Medicament_Ivan->insertMedicComposants($medicament,$composant,$CST_QTE);
             $this->ajouterComposantMeds();
         }
+        
+        public function composantMed(){
+            $medicament = $_POST['medicament'];
+            $data["lesComposants"] = $this->Model_Medicament_Ivan->getComposantMeds($medicament);
+            $this->load->view('v_composantAj',$data);
+        }
+
+
+        public function modifierComposantMeds(){
+           // $idMedicament = $_GET['idMedicament'];
+
+            $data['lesMedicaments'] =$this->Model_Medicament_Ivan->getAllMedicament();
+            $this->load->view('v_modComMod',$data);
+            
+        }
+        
+        public function modifierComposantMedic(){
+            $medicament = $_POST['medicament'];
+            $composant = $_POST['composant'];
+            $CST_QTE = $_POST['quantite'];
+            $this->Model_Medicament_Ivan->modifierMedicComposants($medicament,$composant,$CST_QTE);
+            $this->ajouterComposantMeds();
+        }
+        
+       public function quantiteComposantMedic(){
+           $composant = $_POST['composant'];
+           $medicament = $_POST['medicament'];
+           $data["lesQuantitéCDM"] = $this->Model_Medicament_Ivan->getQuantitéComposantMeds($medicament,$composant);
+           $this->load->view('v_qteComps',$data);
+       }
+       
+       public function modifComposantMedic(){
+            $medicament = $_POST['medicament'];
+            $composant = $_POST['composant'];
+            $CST_QTE = $_POST['quantite'];
+            
+            $this->Model_Medicament_Ivan->modifierMedicComposants($medicament,$composant,$CST_QTE);
+            $this->modifierComposantMeds();
+       }
        
       
 }

@@ -26,22 +26,26 @@
                       $('#idMeds').show(
                          function(){
                              $('#hidden_id_meds').val(($(this).val()));
+                             ComposantMed();
                          });
                          $('#idMeds').change(
                          function(){
                              $('#hidden_id_meds').val(($(this).val()));
+                             ComposantMed();
                          });
                          
                          $('#selComp').show(
                          function(){
                              $('#hidden_id_comps').val(($(this).val()));
+                             QuantiteMedCom();
                          });
                          $('#selComp').change(
                          function(){
                              $('#hidden_id_comps').val(($(this).val()));
+                             QuantiteMedCom();
                          });
 
-                         $('#btnModQte').click(
+                         $('#btnValidCom').click(
                          function(){
                            ModifMedCom();
                             
@@ -64,8 +68,8 @@
         <body>
 
     <div class="container">
-        <div id="Aj">
-        <h2>Ajouter les composants d'un medicament</h2>
+        <div id="MedComps">
+        <h2>Modifier les composants d'un medicament</h2>
         <hr>
             <h3>Choisissez un medicament</h3>
        
@@ -79,32 +83,30 @@
             </select>
              <input type="hidden" name="hidden " id="hidden_id_meds" >
             <input type="hidden" name="hidden " id="hidden_id_comps" >
-       <div class="row">
+
            <div class="col-md-6">
 
                 
             <br>
             <div id='idComps'>
                 <h3>Choisissez les composants</h3>
+                <div id="chComps">
                         <select id="selComp" class="form-control">
                         <?php 
                                 foreach ($lesComposants as $comps){
                                     echo "<option value='".$comps->CMP_CODE."'>".$comps->CMP_LIBELLE."</option>";
                                 }
                             ?>
-                        </select><br>
-            <label>CST Quantité</label><input class="form-control" type="text" id="CST_QTE">
+                        </select>
+                </div><br>
+                        <label>CST Quantité</label><div id="inpQte"><input class="form-control" type="text" id="CST_QTE"></div>
             </div>
-            <input id="btnModQte" class="btn btn-success" type="button" value="Modifier" style="margin-top: 20px;"><br>
+            <input id="btnValidCom" class="btn btn-success" type="submit" name="submitAJCM" value="Ajouter" style="margin-top: 20px;"><br>
             <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/afficherMedicaments'" value="Liste de composants d'un medicament">
-            <input style="margin-top: 20px;"   class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/modifierComposantMeds'" value="Modifier de composants d'un medicament">
+            
             <input id="RevPA" data-toggle="tooltip" data-placement="top" style="margin-top: 20px;" title="Acceuil"  class=" divImp btn btn-info" type="button" onClick="location.href='<?php echo base_url(); ?>'" value="Revenir à la page d'accueil"> 
         </div>
-           <div class="col-md-6">
-               <br>
-               <h3>Les composant qui sont déja existants</h3>
-               <div id="divComps"></div>
-           </div>
+          
        </div>
             
     

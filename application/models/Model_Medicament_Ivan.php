@@ -24,4 +24,14 @@ class Model_Medicament_Ivan extends CI_Model{
         //$this->db->insert("constituer", $data);
         //INSERT INTO `constituer` (`MED_DEPOTLEGAL`, `CMP_CODE`, `CST_QTE`) VALUES ('', '', NULL);
     }
+    
+    public function getQuantitéComposantMeds($medicament,$composant){
+        $sql = $this->db->query("SELECT CST_QTE FROM  constituer where  MED_DEPOTLEGAL='".$medicament."' AND CMP_CODE='".$composant."' ");
+        return $sql->result();
+    }
+    
+    public function modifierMedicComposants($medicament,$composant,$CST_QTE){
+        $this->db->query("UPDATE constituer SET `CST_QTE` = '".$CST_QTE."' WHERE constituer.`MED_DEPOTLEGAL` = '".$medicament."' AND `constituer`.`CMP_CODE` = '".$composant."'");
+    }
+    
 }

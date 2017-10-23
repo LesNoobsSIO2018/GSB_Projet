@@ -31,7 +31,7 @@
 
 		function btnComposant_dun_medicament(){
 					 document.getElementById("divIncCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/ajouterComposantMeds' >Inserer";
-   					 document.getElementById("divModCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/*' >Modifier";
+   					 document.getElementById("divModCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/modifierComposantMeds' >Modifier";
    					 document.getElementById("divListCM").innerHTML = "<a class='btn btn-warning' href='index.php/Ctrl_Composant_Ivan/afficherMedicaments' >Listes";
 
 		}

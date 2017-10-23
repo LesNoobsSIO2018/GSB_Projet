@@ -28,7 +28,7 @@ function IncererMedCom()
     $.ajax(
     {
         type:"post",
-        url:"IncererComposantMedic",
+        url:"incererComposantMedic",
         data:"medicament="+$('#hidden_id_meds').val()+"&composant="+$('#hidden_id_comps').val()+"&quantite="+$('#CST_QTE').val(),
         success:function(data)
         { swal(
@@ -54,6 +54,78 @@ function IncererMedCom()
     }
     );
 }
+function ComposantMed()
+{
+    $.ajax(
+    {
+        type:"post",
+        url:"composantMed",
+        data:"medicament="+$('#hidden_id_meds').val(),
+        success:function(data){
+        
+           $('#selComp').empty();
+            $('#selComp').append(data);
+        },
+        error:function()
+        {
+            alert('Error');
+        }
+    });
+    
+}
+
+function QuantiteMedCom()
+{
+    $.ajax(
+    {
+        type:"post",
+        url:"quantiteComposantMedic",
+        data:"medicament="+$('#hidden_id_meds').val()+"&composant="+$('#hidden_id_comps').val()+"&quantite="+$('#CST_QTE').val(),
+        success:function(data){
+        
+           $('#inpQte').empty();
+            $('#inpQte').append(data);
+        },
+        error:function()
+        {
+            alert('Error');
+        }
+    });
+    
+}
+
+function ModifMedCom()
+{
+    $.ajax(
+    {
+        type:"post",
+        url:"modifComposantMedic",
+        data:"medicament="+$('#hidden_id_meds').val()+"&composant="+$('#hidden_id_comps').val()+"&quantite="+$('#CST_QTE').val(),
+        success:function(data)
+        { swal(
+                'Reussi!',
+                'Modification été éffectué!',
+                'success',{timer: 2000}
+              );
+
+           $('#Aj').empty();
+            $('#Aj').append(data);
+        },
+        error:function()
+        {
+       swal({
+                title: 'Erreur!',
+                text: "Quantité été déja modifié",
+                dangerMode: true,
+                type: 'warning',
+                showCancelButton: true,
+                timer: 2000
+              });
+        }
+    }
+    );
+}
+
 //function AfficherListComp(){
 //    var rdo=document.getElementsByName('list');
 //    
