@@ -50,8 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Ctrl_F';
+$route['Ctrl_Composant_Ivan/'] = 'Ctrl_Composant_Ivan';
 $route['Ctrl_Medoc/'] = 'Ctrl_Medoc';
-$route['Ctrl_Visiteur/'] = 'Ctrl_Visiteur';;
+$route['Ctrl_Visiteur/'] = 'Ctrl_Visiteur';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

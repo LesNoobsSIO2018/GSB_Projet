@@ -24,8 +24,10 @@
             <h1 class="text-left">GSB</h1>
         </header>
         <div class="container">
+            <a href="<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/index">Ivan</a><br>
             <a href="<?php echo base_url(); ?>index.php/Ctrl_Medoc/index">Thomas</a><br>
             <a href="<?php echo base_url(); ?>index.php/Ctrl_Visiteur/index">Sandra</a><br>
+
         </div>
     </body>
 </html>
