@@ -13,17 +13,15 @@
             <!-- Latest compiled and minified JavaScript -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-            <style>
-
-            </style>
     </head>
     <body>
 
         <div class="container">
             <h1 class="text-left">GSB</h1>
-            <a href="<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/index">Ivan</a><br>
-            <a href="<?php echo base_url(); ?>index.php/Ctrl_Medoc/index">Thomas</a><br>
-            <a href="<?php echo base_url(); ?>index.php/Ctrl_Visiteur/index">Sandra</a><br>
+            <a href="<?php echo base_url(); ?>index.php/Ctrl_Composant_Ivan/index">Ivan</a><label> - Gestion des composants	</label><br>
+            <a href="<?php echo base_url(); ?>index.php/Ctrl_Visiteur/index">Sandra</a><label> - Gestion des visiteurs</label><br>
+            <a href="<?php echo base_url(); ?>index.php/Ctrl_Medoc/index">Thomas</a><label> - Gestion des médicaments	</label><br>
+            
 
         </div>
     </body>
